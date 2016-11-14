@@ -31,7 +31,14 @@ begin
   Memo1.Text := '';
   for i:=1 to 100 do
   begin
-    Memo1.Text := Memo1.Text+' '+IntToStr(i);
+    If i/3=trunc(i/3) then
+    begin
+      Memo1.Text := Memo1.Text+' Fizz ';
+    end
+    else
+    begin
+      Memo1.Text := Memo1.Text+' '+IntToStr(i);
+    end;
   end;
 end;
 
